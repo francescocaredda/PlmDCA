@@ -259,7 +259,7 @@ end
 
 #Aggiunto da me
 using DelimitedFiles
-function compute_PPV(filestruct::String, score; N=53 min_separation::Int=1, verbose=true, kwds...) 
+function compute_PPV(filestruct::String, score; N=53, min_separation::Int=1, verbose=true, kwds...) 
     dist = compute_residue_pair_dist(filestruct)
     roc = compute_referencescore(score, dist; kwds...)
     verbose && println("PPV(N) = ", roc[N][end], " PPV(N/5) = ", roc[div(N,5)][end])
