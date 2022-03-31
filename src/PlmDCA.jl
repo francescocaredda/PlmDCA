@@ -1,5 +1,5 @@
 module PlmDCA
-using SharedArrays,Distributed,Printf, LinearAlgebra, Statistics
+using SharedArrays,Distributed,Printf, LinearAlgebra, Statistics, DelimitedFiles
 using NLopt
 import DCAUtils: read_fasta_alignment, remove_duplicate_sequences, compute_weights, add_pseudocount, compute_weighted_frequencies
 using LoopVectorization
